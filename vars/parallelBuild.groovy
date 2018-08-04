@@ -7,13 +7,13 @@ def call(body) {
         parallel {
             stages {
                 stage 'Update' { 
-                    echo "Update ${Product} ${Product} ${Is}"
+                    echo "Update ${config.Name} ${config.Product} ${config.Is}"
                 }
                 stage 'Build' { 
-                    echo "Build ${Product} ${Product} ${Is}"
+                    echo "Build ${config.Name} ${config.Product} ${config.Is}"
                 }
                 stage 'Deploy' { 
-                    echo "Deploy ${Product} ${Product} ${Is}"
+                    echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
                 }
             }
         }

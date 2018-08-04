@@ -1,8 +1,5 @@
-node {
-    def Product = 'rtx'
-    def Config = [product: Product, name: Name, is: Is]
-    echo Config.name
-    echo Config.is
-    echo Config.product
-    parallelBuild(Product)
+@Library("shared-library") _
+
+parallelBuild {
+    [Product= 'rtx', Name= 'ghost', Is= 'true']
 }
