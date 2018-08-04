@@ -1,15 +1,15 @@
-def call(Map config) {
+def call(String product, String name, Bool is) {
     node {
         parallel {
             stages {
                 stage 'Update' { 
-                    echo "Update ${config.product} ${config.name} ${config.is}"
+                    echo "Update ${product} ${name} ${is}"
                 }
                 stage 'Build' { 
-                    echo "Build ${config.product} ${config.name} ${config.is}"
+                    echo "Build ${product} ${name} ${is}"
                 }
                 stage 'Deploy' { 
-                    echo "Deploy ${config.product} ${config.name} ${config.is}"
+                    echo "Deploy ${product} ${name} ${is}"
                 }
             }
         }
