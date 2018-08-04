@@ -1,15 +1,15 @@
-def call(String product, String name, Boolean is) {
+def call(config) {
     node {
         parallel {
             stages {
                 stage 'Update' { 
-                    echo "Update ${product} ${name} ${is}"
+                    echo "Update ${config.product} ${config.name} ${config.is}"
                 }
                 stage 'Build' { 
-                    echo "Build ${product} ${name} ${is}"
+                    echo "Build ${config.product} ${config.name} ${config.is}"
                 }
                 stage 'Deploy' { 
-                    echo "Deploy ${product} ${name} ${is}"
+                    echo "Deploy ${config.product} ${config.name} ${config.is}"
                 }
             }
         }
