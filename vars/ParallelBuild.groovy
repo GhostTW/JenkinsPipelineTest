@@ -1,4 +1,4 @@
-def call(String product, String name, Bool is) {
+def call(String product, String name, Boolean is) {
     node {
         parallel {
             stages {
