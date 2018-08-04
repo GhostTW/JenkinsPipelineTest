@@ -9,5 +9,5 @@ node {
     echo config.Name
     echo config.Is
     echo config.Poduct
-    ParallelBuild config
+    ParallelBuild(config)
 }
