@@ -5,5 +5,9 @@ node {
     echo Name
     echo Is
     echo product
-    ParallelBuild ['Name': Name, 'Is': Is, 'Product': product]
+    def config = ['Name': Name, 'Is': Is, 'Product': product]
+    echo config.Name
+    echo config.Is
+    echo config.Poduct
+    ParallelBuild config
 }
