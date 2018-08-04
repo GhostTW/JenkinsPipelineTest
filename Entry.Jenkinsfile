@@ -4,5 +4,5 @@ node {
     echo Config.name
     echo Config.is
     echo Config.product
-    parallelBuild()
+    parallelBuild(Product)
 }

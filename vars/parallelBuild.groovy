@@ -1,4 +1,4 @@
-def call(String product = "nbg") {
+def call(String product) {
     // node {
     //     parallel {
     //         stages {
