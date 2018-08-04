@@ -3,5 +3,5 @@
 def product = 'rtx'
 
 node {
-    ParallelBuild Name: Name, Is: Is, Product:$product
+    ParallelBuild [Name: Name, Is: Is, Product:$product]
 }
