@@ -6,7 +6,7 @@ def call(body) {
     body()
     echo "node"
     node {
-        parallel {
+        //parallel {
             stages {
                 stage 'Update' { 
                     echo "Update ${config.Name} ${config.Product} ${config.Is}"
@@ -18,6 +18,6 @@ def call(body) {
                     echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
                 }
             }
-        }
+        //}
     }
 }
