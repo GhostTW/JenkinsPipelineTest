@@ -1,4 +1,4 @@
-def call(String product, String name) {
+def call(Closure body) {
     // node {
     //     parallel {
     //         stages {
@@ -15,6 +15,8 @@ def call(String product, String name) {
     //     }
     // }
     node {
+        echo body
         echo "${product} ${name}"
+
     }
 }
