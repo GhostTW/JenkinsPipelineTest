@@ -1,22 +1,19 @@
-def call(Closure body) {
-    // node {
-    //     parallel {
-    //         stages {
-    //             stage 'Update' { 
-    //                 echo "Update ${product} ${name} ${is}"
-    //             }
-    //             stage 'Build' { 
-    //                 echo "Build ${product} ${name} ${is}"
-    //             }
-    //             stage 'Deploy' { 
-    //                 echo "Deploy ${product} ${name} ${is}"
-    //             }
-    //         }
-    //     }
-    // }
+def call(body) {
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body()
     node {
-        echo body
-        echo "${product} ${name}"
-
+        parallel {
+            stages {
+                stage 'Update' { 
+                    echo "Update ${Product} ${Product} ${Is}"
+                }
+                stage 'Build' { 
+                    echo "Build ${Product} ${Product} ${Is}"
+                }
+                stage 'Deploy' { 
+                    echo "Deploy ${Product} ${Product} ${Is}"
+                }
+            }
+        }
     }
 }
