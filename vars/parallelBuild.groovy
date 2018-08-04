@@ -1,8 +1,10 @@
 def call(body) {
+    echo "parallelBuild"
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
+    echo "node"
     node {
         parallel {
             stages {
