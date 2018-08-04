@@ -14,5 +14,7 @@ def call(String product, String name) {
     //         }
     //     }
     // }
-    echo "${product} ${name}"
+    node {
+        echo "${product} ${name}"
+    }
 }
