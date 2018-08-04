@@ -1,7 +1,8 @@
 node {
     def Product = 'rtx'
-    echo Name
-    echo Is
-    echo Product
-    parallelBuild(config: [product: Product, name: Name, is: Is])
+    def Config = [product: Product, name: Name, is: Is]
+    echo Config.name
+    echo Config.is
+    echo Config.product
+    parallelBuild(product: Product, name: Name, is: Is)
 }
