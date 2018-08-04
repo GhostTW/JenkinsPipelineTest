@@ -1,9 +1,9 @@
 @Library('utils') _
 
 node {
-    def product = 'rtx'
+    def Product = 'rtx'
     echo Name
     echo Is
-    echo product
-    ParallelBuild(config: ['Name': Name, 'Is': Is, 'Product': product])
+    echo Product
+    ParallelBuild(config: [name: Name, is: Is, product: Product])
 }
