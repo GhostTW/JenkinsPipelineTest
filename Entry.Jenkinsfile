@@ -3,5 +3,5 @@ node {
     echo Name
     echo Is
     echo Product
-    ParallelBuild(Product: Product, name: Name, is: Is)
+    parallelBuild(config: [product: Product, name: Name, is: Is])
 }
