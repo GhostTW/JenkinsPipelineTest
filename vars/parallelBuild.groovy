@@ -7,7 +7,7 @@ def call(body) {
     echo "node"
     node {
         //parallel {
-            stages {
+            // stages {
                 stage 'Update' { 
                     echo "Update ${config.Name} ${config.Product} ${config.Is}"
                 }
@@ -17,7 +17,7 @@ def call(body) {
                 stage 'Deploy' { 
                     echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
                 }
-            }
+            // }
         //}
     }
 }
