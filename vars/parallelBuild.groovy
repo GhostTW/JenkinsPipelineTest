@@ -1,4 +1,4 @@
-def call(String product) {
+def call(String product, String name) {
     // node {
     //     parallel {
     //         stages {
@@ -14,5 +14,5 @@ def call(String product) {
     //         }
     //     }
     // }
-    echo "${product}"
+    echo "${product} ${name}"
 }
