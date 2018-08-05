@@ -7,18 +7,20 @@ def call(body) {
     echo "node"
     pipeline {
         agent none
-        // parallel {
-            stages {
-                stage('Update') { 
-                    echo "Update ${config.Name} ${config.Product} ${config.Is}"
-                }
-                stage('Build') { 
-                    echo "Build ${config.Name} ${config.Product} ${config.Is}"
-                }
-                stage('Deploy') { 
-                    echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
+        parallel {
+            stage("parallel Build") {
+                stages {
+                    stage('Update') { 
+                        echo "Update ${config.Name} ${config.Product} ${config.Is}"
+                    }
+                    stage('Build') { 
+                        echo "Build ${config.Name} ${config.Product} ${config.Is}"
+                    }
+                    stage('Deploy') { 
+                        echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
+                    }
                 }
             }
-        // }
+        }
     }
 }
