@@ -5,9 +5,9 @@ def call(body) {
     body.delegate = config
     body()
     echo "node"
-    node {
-        //parallel {
-            // stages {
+    // node {
+        parallel {
+            stages {
                 stage('Update') { 
                     echo "Update ${config.Name} ${config.Product} ${config.Is}"
                 }
@@ -17,7 +17,7 @@ def call(body) {
                 stage('Deploy') { 
                     echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
                 }
-            // }
-        //}
-    }
+            }
+        }
+    // }
 }
