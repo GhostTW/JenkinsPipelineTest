@@ -5,23 +5,21 @@ def call(body) {
     body.delegate = config
     body()
     echo "body()"
-    pipeline {
-        agent none
-        stages {
-            stage('Update') {
-                steps {
-                    echo "Update ${config.Name} ${config.Product} ${config.Is}"
-                }
+
+    stages {
+        stage('Update') {
+            steps {
+                echo "Update ${config.Name} ${config.Product} ${config.Is}"
             }
-            stage('Build') {
-                steps {
-                    echo "Build ${config.Name} ${config.Product} ${config.Is}"
-                }
+        }
+        stage('Build') {
+            steps {
+                echo "Build ${config.Name} ${config.Product} ${config.Is}"
             }
-            stage('Deploy') {
-                steps {
-                    echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
-                }
+        }
+        stage('Deploy') {
+            steps {
+                echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
             }
         }
     }
