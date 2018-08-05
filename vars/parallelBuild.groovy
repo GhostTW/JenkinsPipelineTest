@@ -5,7 +5,7 @@ def call(body) {
     body.delegate = config
     body()
     echo "node"
-    // node {
+    pipeline {
         parallel {
             stages {
                 stage('Update') { 
@@ -19,5 +19,5 @@ def call(body) {
                 }
             }
         }
-    // }
+    }
 }
