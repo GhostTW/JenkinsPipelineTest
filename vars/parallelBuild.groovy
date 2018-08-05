@@ -6,21 +6,12 @@ def call(body) {
     body()
     echo "body()"
 
-    stages {
-        stage('Update') {
-            steps {
-                echo "Update ${config.Name} ${config.Product} ${config.Is}"
-            }
-        }
-        stage('Build') {
-            steps {
-                echo "Build ${config.Name} ${config.Product} ${config.Is}"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
-            }
-        }
-    }
+    stage('Update') {  
+        echo "Update ${config.Name} ${config.Product} ${config.Is}" 
+    } 
+    stage('Build') { 
+        echo "Build ${config.Name} ${config.Product} ${config.Is}" 
+    } 
+    stage('Deploy') { 
+        echo "Deploy ${config.Name} ${config.Product} ${config.Is}" 
 }
