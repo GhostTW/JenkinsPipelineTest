@@ -4,22 +4,24 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    echo "node"
-    pipeline {
-        parallel {
-            stage("parallel Build") {
-                stages {
-                    stage('Update') { 
-                        echo "Update ${config.Name} ${config.Product} ${config.Is}"
+    echo "body()"
+    // pipeline {
+        stage("parallel Build") {
+            // parallel {
+            //     stage("parallel Build") {
+                    stages {
+                        stage('Update') { 
+                            echo "Update ${config.Name} ${config.Product} ${config.Is}"
+                        }
+                        stage('Build') { 
+                            echo "Build ${config.Name} ${config.Product} ${config.Is}"
+                        }
+                        stage('Deploy') { 
+                            echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
+                        }
                     }
-                    stage('Build') { 
-                        echo "Build ${config.Name} ${config.Product} ${config.Is}"
-                    }
-                    stage('Deploy') { 
-                        echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
-                    }
-                }
-            }
+            //     }
+            // }
         }
-    }
+    // }
 }
