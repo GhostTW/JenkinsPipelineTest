@@ -6,7 +6,7 @@ def call(body) {
     body()
     echo "body()"
     // pipeline {
-        stage("parallel Build") {
+        // stage("parallel Build") {
             // parallel {
             //     stage("parallel Build") {
                     stages {
@@ -22,6 +22,6 @@ def call(body) {
                     }
             //     }
             // }
-        }
+        // }
     // }
 }
