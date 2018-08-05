@@ -2,7 +2,13 @@
 
 echo "Entry"
 pipeline {
-    parallelBuild {
-        [Product= 'rtx', Name= 'ghost', Is= 'true']
+    agent none
+
+    stage('Parallel Build') {
+        script {
+            parallelBuild {
+                [Product= 'rtx', Name= 'ghost', Is= 'true']
+            }
+        }
     }
 }
