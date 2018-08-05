@@ -2,9 +2,11 @@
 
 echo "Entry"
 node {
-    pipeline {
-        parallelBuild {
-            [Product= 'rtx', Name= 'ghost', Is= 'true']
+    stage('pipeline') {
+        pipeline {
+            parallelBuild {
+                [Product= 'rtx', Name= 'ghost', Is= 'true']
+            }
         }
     }
 }
