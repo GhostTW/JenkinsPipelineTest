@@ -1,18 +1,13 @@
 def call(body) {
     echo "parallelBuild"
-    def config = [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = config
-    body()
-    echo "body()"
 
     stage('Update') {  
-        echo "Update ${config.Name} ${config.Product} ${config.Is}" 
+        echo "Update ${Name} ${Product} ${Is}" 
     } 
     stage('Build') { 
-        echo "Build ${config.Name} ${config.Product} ${config.Is}" 
+        echo "Build ${Name} ${Product} ${Is}" 
     } 
     stage('Deploy') { 
-        echo "Deploy ${config.Name} ${config.Product} ${config.Is}" 
+        echo "Deploy ${Name} ${Product} ${Is}" 
     }
 }
