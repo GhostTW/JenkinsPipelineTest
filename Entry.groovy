@@ -7,8 +7,10 @@ pipeline {
     stages {
         stage('Parallel Build') {
             steps {
-                parallelBuild {
-                    [Product= 'rtx', Name= 'ghost', Is= 'true']
+                script {
+                    parallelBuild {
+                        [Product= 'rtx', Name= 'ghost', Is= 'true']
+                    }
                 }
             }
         }
