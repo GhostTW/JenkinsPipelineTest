@@ -5,7 +5,7 @@ pipeline {
     agent none
 
     stage('Parallel Build') {
-        script {
+        steps {
             parallelBuild {
                 [Product= 'rtx', Name= 'ghost', Is= 'true']
             }
