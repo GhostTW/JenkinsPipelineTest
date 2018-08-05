@@ -14,4 +14,5 @@ def call(body) {
     } 
     stage('Deploy') { 
         echo "Deploy ${config.Name} ${config.Product} ${config.Is}" 
+    }
 }
