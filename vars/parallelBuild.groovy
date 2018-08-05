@@ -6,7 +6,7 @@ def call(body) {
     body()
     echo "body()"
     pipeline {
-        stages {
+        // stages {
             stage('Update') { 
                 step {
                     echo "Update ${config.Name} ${config.Product} ${config.Is}"
@@ -22,6 +22,6 @@ def call(body) {
                     echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
                 }
             }
-        }
+        // }
     }
 }
