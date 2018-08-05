@@ -8,17 +8,17 @@ def call(body) {
     pipeline {
         // stages {
             stage('Update') { 
-                step {
+                steps {
                     echo "Update ${config.Name} ${config.Product} ${config.Is}"
                 }
             }
             stage('Build') {
-                step {
+                steps {
                     echo "Build ${config.Name} ${config.Product} ${config.Is}"
                 }
             }
             stage('Deploy') {
-                step {
+                steps {
                     echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
                 }
             }
