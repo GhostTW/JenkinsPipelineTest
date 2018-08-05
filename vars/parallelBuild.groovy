@@ -6,7 +6,7 @@ def call(body) {
     body()
     echo "node"
     pipeline {
-        agent any
+        agent none
         parallel {
             stages {
                 stage('Update') { 
