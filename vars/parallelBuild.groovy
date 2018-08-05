@@ -9,13 +9,19 @@ def call(body) {
         agent none
         stages {
             stage('Update') {
-                echo "Update ${config.Name} ${config.Product} ${config.Is}"
+                steps {
+                    echo "Update ${config.Name} ${config.Product} ${config.Is}"
+                }
             }
             stage('Build') {
-                echo "Build ${config.Name} ${config.Product} ${config.Is}"
+                steps {
+                    echo "Build ${config.Name} ${config.Product} ${config.Is}"
+                }
             }
             stage('Deploy') {
-                echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
+                steps {
+                    echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
+                }
             }
         }
     }
