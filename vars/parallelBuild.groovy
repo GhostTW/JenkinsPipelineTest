@@ -8,19 +8,25 @@ def call(body) {
     pipeline {
         agent none
         stages {
-            stage('Update') { 
-                step {
-                    echo "Update ${config.Name} ${config.Product} ${config.Is}"
+            stage('Update') {
+                steps {
+                    step {
+                        echo "Update ${config.Name} ${config.Product} ${config.Is}"
+                    }
                 }
             }
             stage('Build') {
-                step {
-                    echo "Build ${config.Name} ${config.Product} ${config.Is}"
+                steps {
+                    step {
+                        echo "Build ${config.Name} ${config.Product} ${config.Is}"
+                    }
                 }
             }
             stage('Deploy') {
-                step {
-                    echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
+                steps {
+                    step {
+                        echo "Deploy ${config.Name} ${config.Product} ${config.Is}"
+                    }
                 }
             }
         }
